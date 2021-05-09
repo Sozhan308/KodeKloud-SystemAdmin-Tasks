@@ -1,3 +1,6 @@
+Task
+---------------------------
+
 There is a critical issue going on with the Nautilus application in Stratos DC. 
 The production support team identified that the application is unable to connect to the database. 
 After digging into the issue, the team found that mariadb service is down on the database server.
@@ -5,6 +8,8 @@ After digging into the issue, the team found that mariadb service is down on the
 
 MariaDB troubleshooting
 ---------------------------
+
+Connect to the database server (stdb01)
 
 1. First try to check status of the mentioned service.
 
