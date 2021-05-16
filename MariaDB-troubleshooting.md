@@ -1,32 +1,32 @@
-*Task
+###MariaDB troubleshooting
 
+**There is a critical issue going on with the Nautilus application in Stratos DC.**
+**The production support team identified that the application is unable to connect to the database.**
+**After digging into the issue, the team found that mariadb service is down on the database server.**
 
-***There is a critical issue going on with the Nautilus application in Stratos DC. 
-***The production support team identified that the application is unable to connect to the database. 
-***After digging into the issue, the team found that mariadb service is down on the database server.
+---
 
+**_Solution_**
 
-*MariaDB troubleshooting
+1. Connect to the database server
 
+2. Verify the status of the mariadb service.
 
-**Connect to the datab
+```sudo systemctl status mariadb```
 
-** 1. First try to check status of the mentioned service.
+3. Verify logs of mariadb and check permissions of the folders 
 
-#sudo systemctl status mariadb
+```cd /var/log/mariadb/```
+```ls -l```
 
-** 2. Then try to check logs of mariadb and check permissions 
+4. check ownership of logs and mysql folders
 
-#cd /var/log/mariadb/
+***_Note : For mysql related logs and folders, the ownership should be mysql:mysql_***
 
-**check ownership of logs and mysql folders
+```cd /var/lib/```
+```chown mysql:mysql mysql/```
 
-***Note : For mysql related logs and folders, the ownership should be mysql:mysql
+_(OR)_
 
-#cd /var/lib/
-#chown mysql:mysql mysql/
-
-(or)
-
-#cd /var/run/mariadb/
-#chown mysql:mysql *
+```cd /var/run/mariadb/```
+```chown mysql:mysql```
