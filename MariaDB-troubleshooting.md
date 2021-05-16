@@ -1,4 +1,4 @@
-###MariaDB troubleshooting
+### MariaDB troubleshooting
 
 **There is a critical issue going on with the Nautilus application in Stratos DC.**
 **The production support team identified that the application is unable to connect to the database.**
