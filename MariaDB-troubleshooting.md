@@ -1,4 +1,4 @@
-### MariaDB troubleshooting
+# MariaDB troubleshooting
 
 **There is a critical issue going on with the Nautilus application in Stratos DC.**
 **The production support team identified that the application is unable to connect to the database.**
@@ -12,21 +12,23 @@
 
 2. Verify the status of the mariadb service.
 
-```sudo systemctl status mariadb```
+`sudo systemctl status mariadb`
 
 3. Verify logs of mariadb and check permissions of the folders 
 
-```cd /var/log/mariadb/```
-```ls -l```
+`cd /var/log/mariadb/`
+`ls -l`
 
 4. check ownership of logs and mysql folders
 
 ***_Note : For mysql related logs and folders, the ownership should be mysql:mysql_***
 
-```cd /var/lib/```
-```chown mysql:mysql mysql/```
+`cd /var/lib/`
+`chown mysql:mysql mysql/`
 
 _(OR)_
 
-```cd /var/run/mariadb/```
-```chown mysql:mysql```
+`cd /var/run/mariadb/`
+`chown mysql:mysql`
+
+---

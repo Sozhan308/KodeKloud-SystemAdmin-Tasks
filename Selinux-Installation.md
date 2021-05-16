@@ -13,12 +13,13 @@
 
 1. Verify for installed packages related to SElinux
 
-```rpm -qa | grep -i selinux```
+`rpm -qa | grep -i selinux`
 
 2. Install the below packages
 
-```sudo yum install selinux-policy-targeted selinux-policy-devel -y```
-```sudo yum install policycoreutils policycoreutils-python setools setools-console setroubleshoot -y```
+`sudo yum install selinux-policy-targeted selinux-policy-devel -y`
+`sudo yum install policycoreutils policycoreutils-python setools setools-console setroubleshoot -y`
 
 3. After installed, Set SELINUX=disabled in /etc/selinux/config
 
+---
