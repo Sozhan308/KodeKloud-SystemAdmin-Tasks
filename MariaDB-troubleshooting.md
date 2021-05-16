@@ -16,19 +16,22 @@
 
 3. Verify logs of mariadb and check permissions of the folders 
 
-`cd /var/log/mariadb/`
+`cd /var/log/mariadb/`  
+
 `ls -l`
 
 4. check ownership of logs and mysql folders
 
 ***_Note : For mysql related logs and folders, the ownership should be mysql:mysql_***
 
-`cd /var/lib/`
+`cd /var/lib/`  
+
 `chown mysql:mysql mysql/`
 
 _(OR)_
 
-`cd /var/run/mariadb/`
+`cd /var/run/mariadb/`  
+
 `chown mysql:mysql`
 
 ---

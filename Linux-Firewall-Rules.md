@@ -19,15 +19,16 @@
 
 2. Add a port to the allowed ports to open it for incoming traffic 
 
-`firewall-cmd --add-port=port-number/port-type`
+`firewall-cmd --add-port=port-number/port-type`  
 
-`firewall-cmd --add-port=6000/tcp`
+`firewall-cmd --add-port=6000/tcp`  
 
 The port types are either tcp, udp, sctp, or dccp. The type must match the type of network communication.
 
 Make the new settings persistent:
 
-`firewall-cmd --runtime-to-permanent`
+`firewall-cmd --runtime-to-permanent`  
+
 The port types are either tcp, udp, sctp, or dccp. The type must match the type of network communication.
 
 `systemctl reload firewalld`
